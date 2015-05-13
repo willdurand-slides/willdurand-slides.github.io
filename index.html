@@ -1,1 +1,20 @@
-
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My slides</title>
+  </head>
+  <body>
+    <h4>My slides</h4>
+    <ul>
+    {% for repo in site.github.public_repositories %}
+      {% repo.has_pages and repo.name != site.github.repository_name %}
+        <li>
+          <a href="{{site.github.url}}/{{repo.name}}">{{repo.description}}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </body>
+</html>
