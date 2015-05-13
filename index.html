@@ -11,7 +11,7 @@
     {% for repo in site.github.public_repositories %}
       {% if repo.has_pages and repo.name != site.github.repository_name %}
         <li>
-          <a href="{{site.github.url}}/{{repo.name}}">{{repo.description}}</a>
+          <a href="{{site.github.url}}/{{repo.name}}">{{repo.description}}</a> [<a href="{{repo.html_url}}">sources</a>]
         </li>
       {% endif %}
     {% endfor %}
